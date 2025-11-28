@@ -1,16 +1,3 @@
-Below is a **ready-to-copy-paste complete README.md file**.
-This is the final file — **no extra formatting**, just copy → create file → paste.
-
----
-
-# **📘 Product Notes Extension – README.md**
-
-```
-File name: README.md
-```
-
----
-
 # 📘 Product Notes Extension – README
 
 ## Overview
