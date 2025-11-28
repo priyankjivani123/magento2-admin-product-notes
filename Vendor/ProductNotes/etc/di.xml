@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Vendor\ProductNotes\Api\ProductNotesRepositoryInterface" type="Vendor\ProductNotes\Model\ProductNotesRepository"/>
+	<preference for="Vendor\ProductNotes\Api\Data\ProductNotesInterface" type="Vendor\ProductNotes\Model\ProductNotes"/>
+	<preference for="Vendor\ProductNotes\Api\Data\ProductNotesSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<preference for="Vendor\ProductNotes\Api\Data\ProductNotesResponseInterface" type="Vendor\ProductNotes\Model\Data\ProductNotesResponse"/>
+    <preference for="Vendor\ProductNotes\Api\Data\NoteItemInterface" type="Vendor\ProductNotes\Model\Data\NoteItem"/>
+
+	<virtualType name="Vendor\ProductNotes\Model\ResourceModel\ProductNotes\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">vendor_productnotes_productnotes</argument>
+			<argument name="resourceModel" xsi:type="string">Vendor\ProductNotes\Model\ResourceModel\ProductNotes\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="vendor_productnotes_productnotes_listing_data_source" xsi:type="string">Vendor\ProductNotes\Model\ResourceModel\ProductNotes\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+</config>

@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="vendor_productnotes_productnotes" resource="default" engine="innodb" comment="vendor_productnotes_productnotes Table">
+		<column xsi:type="int" name="note_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="note_id"/>
+		</constraint>
+        <column name="product_id" nullable="true" xsi:type="int" comment="product_id" identity="false" unsigned="true"/>
+        
+        <!-- Foreign Key Constraint -->
+        <constraint xsi:type="foreign" 
+                    referenceId="VENDOR_PRODUCTNOTES_PRODUCT_ID_CATALOG_PRODUCT_ENTITY_ENTITY_ID" 
+                    table="vendor_productnotes_productnotes" 
+                    column="product_id" 
+                    referenceTable="catalog_product_entity" 
+                    referenceColumn="entity_id" 
+                    onDelete="CASCADE"/>
+        
+		<column name="note_title" nullable="true" xsi:type="varchar" comment="note_title" length="255"/>
+		<column name="note_details" nullable="true" xsi:type="text" comment="note_details"/>
+		<column  name="created_at" xsi:type="datetime" nullable="false" default="CURRENT_TIMESTAMP" comment="Created At"/>
+	</table>
+</schema>
