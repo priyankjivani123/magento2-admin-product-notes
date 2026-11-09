@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Priyank\ProductNotes\Api\ProductNotesRepositoryInterface" type="Priyank\ProductNotes\Model\ProductNotesRepository"/>
+	<preference for="Priyank\ProductNotes\Api\Data\ProductNotesInterface" type="Priyank\ProductNotes\Model\ProductNotes"/>
+	<preference for="Priyank\ProductNotes\Api\Data\ProductNotesSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<preference for="Priyank\ProductNotes\Api\Data\ProductNotesResponseInterface" type="Priyank\ProductNotes\Model\Data\ProductNotesResponse"/>
+    <preference for="Priyank\ProductNotes\Api\Data\NoteItemInterface" type="Priyank\ProductNotes\Model\Data\NoteItem"/>
+
+	<virtualType name="Priyank\ProductNotes\Model\ResourceModel\ProductNotes\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">priyank_productnotes_productnotes</argument>
+			<argument name="resourceModel" xsi:type="string">Priyank\ProductNotes\Model\ResourceModel\ProductNotes\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="priyank_productnotes_productnotes_listing_data_source" xsi:type="string">Priyank\ProductNotes\Model\ResourceModel\ProductNotes\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+</config>
