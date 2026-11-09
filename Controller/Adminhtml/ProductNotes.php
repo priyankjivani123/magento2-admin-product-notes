@@ -5,13 +5,13 @@
  */
 declare(strict_types=1);
 
-namespace Priyank\ProductNotes\Controller\Adminhtml;
+namespace PriyankJivani\AdminProductNotes\Controller\Adminhtml;
 
 abstract class ProductNotes extends \Magento\Backend\App\Action
 {
 
     protected $_coreRegistry;
-    const ADMIN_RESOURCE = 'Priyank_ProductNotes::top_level';
+    const ADMIN_RESOURCE = 'PriyankJivani_AdminProductNotes::top_level';
 
     /**
      * @param \Magento\Backend\App\Action\Context $context

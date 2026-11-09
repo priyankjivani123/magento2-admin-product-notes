@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Priyank\ProductNotes\Ui\Component\Listing\Column;
+namespace PriyankJivani\AdminProductNotes\Ui\Component\Listing\Column;
 
 class ProductNotesActions extends \Magento\Ui\Component\Listing\Columns\Column
 {

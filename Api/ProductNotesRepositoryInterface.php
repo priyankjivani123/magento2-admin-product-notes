@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Priyank\ProductNotes\Api;
+namespace PriyankJivani\AdminProductNotes\Api;
 
 use Magento\Framework\Api\SearchCriteriaInterface;
 
@@ -14,18 +14,18 @@ interface ProductNotesRepositoryInterface
 
     /**
      * Save ProductNotes
-     * @param \Priyank\ProductNotes\Api\Data\ProductNotesInterface $productNotes
-     * @return \Priyank\ProductNotes\Api\Data\ProductNotesInterface
+     * @param \PriyankJivani\AdminProductNotes\Api\Data\ProductNotesInterface $productNotes
+     * @return \PriyankJivani\AdminProductNotes\Api\Data\ProductNotesInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function save(
-        \Priyank\ProductNotes\Api\Data\ProductNotesInterface $productNotes
+        \PriyankJivani\AdminProductNotes\Api\Data\ProductNotesInterface $productNotes
     );
 
     /**
      * Retrieve ProductNotes
      * @param string $productnotesId
-     * @return \Priyank\ProductNotes\Api\Data\ProductNotesInterface
+     * @return \PriyankJivani\AdminProductNotes\Api\Data\ProductNotesInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function get($productnotesId);
@@ -33,7 +33,7 @@ interface ProductNotesRepositoryInterface
     /**
      * Retrieve ProductNotes matching the specified criteria.
      * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
-     * @return \Priyank\ProductNotes\Api\Data\ProductNotesSearchResultsInterface
+     * @return \PriyankJivani\AdminProductNotes\Api\Data\ProductNotesSearchResultsInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function getList(
@@ -42,12 +42,12 @@ interface ProductNotesRepositoryInterface
 
     /**
      * Delete ProductNotes
-     * @param \Priyank\ProductNotes\Api\Data\ProductNotesInterface $productNotes
+     * @param \PriyankJivani\AdminProductNotes\Api\Data\ProductNotesInterface $productNotes
      * @return bool true on success
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function delete(
-        \Priyank\ProductNotes\Api\Data\ProductNotesInterface $productNotes
+        \PriyankJivani\AdminProductNotes\Api\Data\ProductNotesInterface $productNotes
     );
 
     /**
@@ -62,7 +62,7 @@ interface ProductNotesRepositoryInterface
     /**
      * Get product notes by product ID
      * @param int $productId
-     * @return \Priyank\ProductNotes\Api\Data\ProductNotesResponseInterface
+     * @return \PriyankJivani\AdminProductNotes\Api\Data\ProductNotesResponseInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function getByProductId($productId);

@@ -5,20 +5,20 @@
  */
 declare(strict_types=1);
 
-namespace Priyank\ProductNotes\Model;
+namespace PriyankJivani\AdminProductNotes\Model;
 
 use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
 use Magento\Framework\Exception\CouldNotDeleteException;
 use Magento\Framework\Exception\CouldNotSaveException;
 use Magento\Framework\Exception\NoSuchEntityException;
-use Priyank\ProductNotes\Api\Data\ProductNotesInterface;
-use Priyank\ProductNotes\Api\Data\ProductNotesInterfaceFactory;
-use Priyank\ProductNotes\Api\Data\ProductNotesSearchResultsInterfaceFactory;
-use Priyank\ProductNotes\Api\ProductNotesRepositoryInterface;
-use Priyank\ProductNotes\Model\ResourceModel\ProductNotes as ResourceProductNotes;
-use Priyank\ProductNotes\Model\ResourceModel\ProductNotes\CollectionFactory as ProductNotesCollectionFactory;
-use Priyank\ProductNotes\Api\Data\ProductNotesResponseInterfaceFactory;
-use Priyank\ProductNotes\Api\Data\NoteItemInterfaceFactory;
+use PriyankJivani\AdminProductNotes\Api\Data\ProductNotesInterface;
+use PriyankJivani\AdminProductNotes\Api\Data\ProductNotesInterfaceFactory;
+use PriyankJivani\AdminProductNotes\Api\Data\ProductNotesSearchResultsInterfaceFactory;
+use PriyankJivani\AdminProductNotes\Api\ProductNotesRepositoryInterface;
+use PriyankJivani\AdminProductNotes\Model\ResourceModel\ProductNotes as ResourceProductNotes;
+use PriyankJivani\AdminProductNotes\Model\ResourceModel\ProductNotes\CollectionFactory as ProductNotesCollectionFactory;
+use PriyankJivani\AdminProductNotes\Api\Data\ProductNotesResponseInterfaceFactory;
+use PriyankJivani\AdminProductNotes\Api\Data\NoteItemInterfaceFactory;
 
 class ProductNotesRepository implements ProductNotesRepositoryInterface
 {

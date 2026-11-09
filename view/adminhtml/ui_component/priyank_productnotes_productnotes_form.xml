@@ -9,10 +9,10 @@
 	</argument>
 	<settings>
 		<buttons>
-			<button name="back" class="Priyank\ProductNotes\Block\Adminhtml\ProductNotes\Edit\BackButton"/>
-			<button name="delete" class="Priyank\ProductNotes\Block\Adminhtml\ProductNotes\Edit\DeleteButton"/>
-			<button name="save" class="Priyank\ProductNotes\Block\Adminhtml\ProductNotes\Edit\SaveButton"/>
-			<button name="save_and_continue" class="Priyank\ProductNotes\Block\Adminhtml\ProductNotes\Edit\SaveAndContinueButton"/>
+			<button name="back" class="PriyankJivani\AdminProductNotes\Block\Adminhtml\ProductNotes\Edit\BackButton"/>
+			<button name="delete" class="PriyankJivani\AdminProductNotes\Block\Adminhtml\ProductNotes\Edit\DeleteButton"/>
+			<button name="save" class="PriyankJivani\AdminProductNotes\Block\Adminhtml\ProductNotes\Edit\SaveButton"/>
+			<button name="save_and_continue" class="PriyankJivani\AdminProductNotes\Block\Adminhtml\ProductNotes\Edit\SaveAndContinueButton"/>
 		</buttons>
 		<namespace>priyank_productnotes_productnotes_form</namespace>
 		<dataScope>data</dataScope>
@@ -29,7 +29,7 @@
 		<settings>
 			<submitUrl path="*/*/save"/>
 		</settings>
-		<dataProvider name="productnotes_form_data_source" class="Priyank\ProductNotes\Model\ProductNotes\DataProvider">
+		<dataProvider name="productnotes_form_data_source" class="PriyankJivani\AdminProductNotes\Model\ProductNotes\DataProvider">
 			<settings>
 				<requestFieldName>note_id</requestFieldName>
 				<primaryFieldName>note_id</primaryFieldName>
@@ -68,7 +68,7 @@
     <formElements>
         <select>
             <settings>
-                <options class="Priyank\ProductNotes\Model\Source\Product"/>
+                <options class="PriyankJivani\AdminProductNotes\Model\Source\Product"/>
                 <caption translate="true">-- Please Select Product --</caption>
             </settings>
         </select>

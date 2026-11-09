@@ -3,11 +3,11 @@
 	<acl>
 		<resources>
 			<resource id="Magento_Backend::admin">
-				<resource id="Priyank_ProductNotes::ProductNotes" title="ProductNotes" sortOrder="10">
-					<resource id="Priyank_ProductNotes::ProductNotes_save" title="Save ProductNotes" sortOrder="10"/>
-					<resource id="Priyank_ProductNotes::ProductNotes_delete" title="Delete ProductNotes" sortOrder="20"/>
-					<resource id="Priyank_ProductNotes::ProductNotes_update" title="Update ProductNotes" sortOrder="30"/>
-					<resource id="Priyank_ProductNotes::ProductNotes_view" title="View ProductNotes" sortOrder="40"/>
+				<resource id="PriyankJivani_AdminProductNotes::ProductNotes" title="ProductNotes" sortOrder="10">
+					<resource id="PriyankJivani_AdminProductNotes::ProductNotes_save" title="Save ProductNotes" sortOrder="10"/>
+					<resource id="PriyankJivani_AdminProductNotes::ProductNotes_delete" title="Delete ProductNotes" sortOrder="20"/>
+					<resource id="PriyankJivani_AdminProductNotes::ProductNotes_update" title="Update ProductNotes" sortOrder="30"/>
+					<resource id="PriyankJivani_AdminProductNotes::ProductNotes_view" title="View ProductNotes" sortOrder="40"/>
 				</resource>
 			</resource>
 		</resources>

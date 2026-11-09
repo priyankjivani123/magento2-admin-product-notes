@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Priyank\ProductNotes\Model\ResourceModel;
+namespace PriyankJivani\AdminProductNotes\Model\ResourceModel;
 
 use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 

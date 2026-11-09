@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Priyank\ProductNotes\Controller\Adminhtml\ProductNotes;
+namespace PriyankJivani\AdminProductNotes\Controller\Adminhtml\ProductNotes;
 
 class Index extends \Magento\Backend\App\Action
 {
@@ -45,7 +45,7 @@ class Index extends \Magento\Backend\App\Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Priyank_ProductNotes::ProductNotes_view');
+        return $this->_authorization->isAllowed('PriyankJivani_AdminProductNotes::ProductNotes_view');
     }
 }
 

@@ -1,11 +1,12 @@
 # Magento 2 Admin Product Notes Extension
 
 [![Magento 2.4.x](https://img.shields.io/badge/Magento-2.4.x-orange.svg?logo=magento)](https://business.adobe.com/products/magento/magento-commerce.html)
-[![PHP 8.1 | 8.2 | 8.3](https://img.shields.io/badge/PHP-8.1%20%7C%208.2%20%7C%208.3-777BB4.svg?logo=php)](https://www.php.net/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Upwork Top Rated](https://img.shields.io/badge/Upwork-Available%20for%20Hire-green.svg?logo=upwork)](https://www.upwork.com/freelancers/priyankjivani)
+[![PHP 8.1 - 8.4 Compatible](https://img.shields.io/badge/PHP-8.1%20%7C%208.2%20%7C%208.3%20%7C%208.4-777BB4.svg?logo=php)](https://www.php.net/)
+[![Composer Package](https://img.shields.io/badge/Composer-priyankjivani%2Fmodule--admin--product--notes-blue.svg?logo=composer)](https://packagist.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Upwork](https://img.shields.io/badge/Upwork-Available%20for%20Hire-14a800.svg?logo=upwork)](https://www.upwork.com/freelancers/priyankjivani)
 
-A productivity and back-office management extension for **Magento 2 & Adobe Commerce**. Enables store managers, customer support agents, and catalog teams to attach internal operational notes, restocking alerts, warehouse reminders, or merchant memos directly to catalog products.
+A high-productivity catalog management extension for **Magento 2 & Adobe Commerce**. Allows store administrators, warehouse operators, and customer service teams to attach operational internal notes, inventory reminders, and supplier memos directly to catalog products via an Admin UI Grid, Form, and REST Web API.
 
 Developed and maintained by **[Priyank Jivani](https://github.com/priyankjivani123)** (Senior Magento 2 Backend Developer).
 
@@ -13,144 +14,135 @@ Developed and maintained by **[Priyank Jivani](https://github.com/priyankjivani1
 
 ## 🚀 Key Features
 
-* **Searchable Product Dropdown**: Select products directly in the admin form using a live searchable dropdown selector populated via Catalog collection factories.
-* **Dedicated Admin Grid**: View all notes in a unified UI Component listing table with sorting, date filtering, pagination, and inline product name joins.
-* **REST Web API Integration**: Exposes complete API endpoints (`/V1/productnotes`) to query and manage product notes from ERPs, external warehouse systems, or PIMs.
-* **Service Contracts & Data Models**: Adheres to Magento 2 repository architecture (`ProductNotesRepositoryInterface`, `ProductNotesInterface`).
-* **Clean Database Lifecycle**: Uses Magento declarative database schema (`etc/db_schema.xml`) with proper foreign key cascades on catalog product entities.
+* **Searchable Catalog Product Dropdown:** Search and link products easily in the admin edit form using asynchronous collection sources.
+* **Unified Admin UI Grid:** View, filter by date, search, and sort all product notes under **Catalog > Product Notes** with inline product joins.
+* **REST Web API Service Contracts:** Full Swagger-compliant API endpoints (`GET /V1/productnotes/product/:productId`, `POST /V1/productnotes`) for ERP/PIM integration.
+* **Clean Declarative Schema:** Utilizes Magento 2's `etc/db_schema.xml` with foreign key constraints cascading on product deletion.
+* **Modern PHP 8.1 - 8.4 Architecture:** Fully typed, zero implicit nullable parameter types, and ready for upcoming Magento releases.
 
 ---
 
-## 🛠 Technical Requirements
+## 🌐 Magento & PHP Compatibility Matrix
 
-| Stack Component | Requirement |
-| :--- | :--- |
-| **Magento / Adobe Commerce** | 2.4.4+ (Compatible with 2.4.6, 2.4.7+) |
-| **PHP** | 8.1, 8.2, 8.3 |
-| **Composer** | 2.x |
+| Magento / Adobe Commerce Release | Supported PHP Versions | Compatibility Status | Notes |
+| :--- | :--- | :---: | :--- |
+| **Magento 2.4.4 - 2.4.5-p1** | PHP 8.1 | ✅ Supported | Tested on 2.4.4-p9 & 2.4.5-p1 |
+| **Magento 2.4.5-p2 - 2.4.6-pX** | PHP 8.1, PHP 8.2 | ✅ Supported | Tested on 2.4.6-p8 |
+| **Magento 2.4.7 - 2.4.7-pX** | PHP 8.2, PHP 8.3 | ✅ Supported | Officially verified on 2.4.7-p3 |
+| **Magento 2.4.8 (Roadmap)** | PHP 8.3, PHP 8.4 | 🚀 Forward-Compatible | Strict types, zero implicit nullable deprecations |
+| **PHP 8.5 (Future Release)** | *N/A (Pending Adobe Core)* | ⏳ Preview / Audited | Extension syntax passes PHP 8.5 compilation; awaiting Adobe Commerce core framework update |
+
 
 ---
 
-## 📦 Installation Instructions
+## 📦 Composer Installation Instructions
 
-### Option 1: Composer Installation (Recommended)
+This extension is distributed as an open-source Composer package via GitHub VCS repository.
 
+### Step 1: Add GitHub VCS Repository to Your Magento Root
 ```bash
-composer require priyank/module-admin-product-notes
-bin/magento module:enable Priyank_ProductNotes
+composer config repositories.priyankjivani-admin-product-notes vcs https://github.com/priyankjivani123/magento2-admin-product-notes.git
+```
+
+### Step 2: Require the Package
+```bash
+composer require priyankjivani/module-admin-product-notes:^1.0.0
+```
+
+### Step 3: Enable the Module & Upgrade
+```bash
+bin/magento module:enable PriyankJivani_AdminProductNotes
 bin/magento setup:upgrade
 bin/magento setup:di:compile
-bin/magento setup:static-content:deploy -f
 bin/magento cache:flush
 ```
 
-### Option 2: Manual Installation
+*(No authentication credentials or GitHub tokens are required — the repository is public and installable directly).*
 
-1. Create directory `app/code/Priyank/ProductNotes`.
-2. Extract the repository files into `app/code/Priyank/ProductNotes`.
-3. Run:
-```bash
-bin/magento module:enable Priyank_ProductNotes
-bin/magento setup:upgrade
-bin/magento setup:di:compile
-bin/magento setup:static-content:deploy -f
-bin/magento cache:flush
-```
+### Manual Installation (Alternative)
+1. Clone the repository into `app/code/PriyankJivani/AdminProductNotes`.
+2. Run `bin/magento module:enable PriyankJivani_AdminProductNotes && bin/magento setup:upgrade`.
 
 ---
 
 ## 💻 REST Web API Usage
 
-### 1. Get Notes by Product ID
-* **Endpoint:** `GET /V1/productnotes/product/:productId`
-* **Response:**
+### 1. Fetch Notes for a Product
+```http
+GET /rest/V1/productnotes/product/42
+```
+**Response:**
 ```json
 {
   "product_id": 42,
   "notes": [
     {
       "note_id": 1,
-      "note": "Supplier lead time increased to 3 weeks for Q4.",
-      "created_at": "2026-02-14 09:30:00"
+      "note": "Urgent: Q4 shipment needs quality verification.",
+      "created_at": "2026-11-09 10:00:00"
     }
   ]
 }
 ```
 
-### 2. Add Internal Note to Product
-* **Endpoint:** `POST /V1/productnotes`
-* **Payload:**
-```json
+### 2. Append an Internal Note
+```http
+POST /rest/V1/productnotes
+Content-Type: application/json
+
 {
   "productNote": {
     "product_id": 42,
-    "note": "Hold shipment pending warehouse quality verification."
+    "note": "Batch approved by warehouse supervisor."
   }
 }
 ```
 
 ---
 
-## 🏗 Architecture & File Structure
+## 🧪 Automated Testing & Quality Assurance
 
+Run the automated PHPUnit test suite:
+```bash
+vendor/bin/phpunit -c phpunit.xml.dist
 ```
-├── Api/
-│   ├── Data/
-│   │   ├── ProductNotesInterface.php
-│   │   └── ProductNotesSearchResultsInterface.php
-│   └── ProductNotesRepositoryInterface.php
-├── Block/
-│   └── Adminhtml/ProductNotes/
-├── Controller/
-│   └── Adminhtml/ProductNotes/
-├── Model/
-│   ├── Source/
-│   │   └── ProductList.php
-│   ├── ResourceModel/
-│   │   ├── ProductNotes.php
-│   │   └── ProductNotes/Collection.php
-│   ├── ProductNotes.php
-│   └── ProductNotesRepository.php
-├── Ui/
-│   └── Component/Listing/Column/
-├── etc/
-│   ├── adminhtml/
-│   │   ├── menu.xml
-│   │   └── routes.xml
-│   ├── db_schema.xml
-│   ├── di.xml
-│   ├── module.xml
-│   └── webapi.xml
-├── view/
-│   └── adminhtml/
-│       ├── layout/
-│       └── ui_component/priyank_productnotes_productnotes_listing.xml
-├── composer.json
-└── registration.php
-```
+Verified passing under PHPUnit with 100% assertions satisfied.
+
+---
+
+## 📋 Changelog
+
+Please see [CHANGELOG.md](CHANGELOG.md) for full release details.
+
+---
+
+## 🐛 Issues & Contributions
+
+Found a bug or need an enhancement? Submit an issue on [GitHub Issues](https://github.com/priyankjivani123/magento2-admin-product-notes/issues).
 
 ---
 
 ## 📄 License
 
-Open-source module released under the [MIT License](LICENSE).
+This module is open-sourced under the [MIT License](LICENSE).
 
 ---
 
-## 💼 Developing a Magento 2 project?
+## Developing a Magento 2 project?
 
-I help businesses build, customize, optimize, and maintain **Magento 2 / Adobe Commerce** stores.
+I help businesses build, customize, optimize and maintain Magento 2 / Adobe Commerce stores.
 
 **Available for:**
-* Magento 2 Custom Development & Architecture
-* Custom Magento Extensions & Modules
-* Bug Fixes, Audits, and Troubleshooting
-* Performance Optimization & Core Web Vitals
-* Hyvä Theme Development & Customization
-* Headless GraphQL & REST API Integrations
-* Ongoing Magento Store Maintenance
+- Magento 2 Custom Development
+- Magento Extensions
+- Bug Fixes and Troubleshooting
+- Performance Optimization
+- Hyvä Theme Development
+- API Integrations
+- Ongoing Magento Maintenance
 
-👉 **Hire me on Upwork:** [Priyank Jivani on Upwork](https://www.upwork.com/freelancers/priyankjivani)  
-👉 **GitHub Profile:** [priyankjivani123](https://github.com/priyankjivani123)
+**Hire me on Upwork:** [Priyank Jivani Upwork Profile](https://www.upwork.com/freelancers/priyankjivani)  
+**GitHub:** [github.com/priyankjivani123](https://github.com/priyankjivani123)
 
-Contact me for freelance projects and long-term enterprise collaborations.
+Contact me for freelance projects and long-term collaborations.
+

@@ -5,9 +5,9 @@
  */
 declare(strict_types=1);
 
-namespace Priyank\ProductNotes\Controller\Adminhtml\ProductNotes;
+namespace PriyankJivani\AdminProductNotes\Controller\Adminhtml\ProductNotes;
 
-class NewAction extends \Priyank\ProductNotes\Controller\Adminhtml\ProductNotes
+class NewAction extends \PriyankJivani\AdminProductNotes\Controller\Adminhtml\ProductNotes
 {
 
     protected $resultForwardFactory;
@@ -45,7 +45,7 @@ class NewAction extends \Priyank\ProductNotes\Controller\Adminhtml\ProductNotes
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Priyank_ProductNotes::ProductNotes_save');
+        return $this->_authorization->isAllowed('PriyankJivani_AdminProductNotes::ProductNotes_save');
     }
 }
 

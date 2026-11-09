@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Priyank\ProductNotes\Controller\Adminhtml\ProductNotes;
+namespace PriyankJivani\AdminProductNotes\Controller\Adminhtml\ProductNotes;
 
 use Magento\Framework\Exception\LocalizedException;
 
@@ -39,7 +39,7 @@ class Save extends \Magento\Backend\App\Action
         if ($data) {
             $id = $this->getRequest()->getParam('note_id');
         
-            $model = $this->_objectManager->create(\Priyank\ProductNotes\Model\ProductNotes::class)->load($id);
+            $model = $this->_objectManager->create(\PriyankJivani\AdminProductNotes\Model\ProductNotes::class)->load($id);
             if (!$model->getId() && $id) {
                 $this->messageManager->addErrorMessage(__('This Productnotes no longer exists.'));
                 return $resultRedirect->setPath('*/*/');
@@ -75,7 +75,7 @@ class Save extends \Magento\Backend\App\Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Priyank_ProductNotes::ProductNotes_save');
+        return $this->_authorization->isAllowed('PriyankJivani_AdminProductNotes::ProductNotes_save');
     }
 }
 

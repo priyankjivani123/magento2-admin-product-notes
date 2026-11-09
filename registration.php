@@ -7,5 +7,5 @@ declare(strict_types=1);
 
 use Magento\Framework\Component\ComponentRegistrar;
 
-ComponentRegistrar::register(ComponentRegistrar::MODULE, 'Priyank_ProductNotes', __DIR__);
+ComponentRegistrar::register(ComponentRegistrar::MODULE, 'PriyankJivani_AdminProductNotes', __DIR__);
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
 	<menu>
-		<add id="Priyank_ProductNotes::priyank_productnotes_productnotes" title="Product Notes" module="Priyank_ProductNotes" sortOrder="9999" resource="Priyank_ProductNotes::ProductNotes" parent="Magento_Catalog::catalog" action="priyank_productnotes/productnotes/index"/>
+		<add id="PriyankJivani_AdminProductNotes::priyank_productnotes_productnotes" title="Product Notes" module="PriyankJivani_AdminProductNotes" sortOrder="9999" resource="PriyankJivani_AdminProductNotes::ProductNotes" parent="Magento_Catalog::catalog" action="priyank_productnotes/productnotes/index"/>
 	</menu>
 </config>

@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Priyank\ProductNotes\Block\Adminhtml\ProductNotes\Edit;
+namespace PriyankJivani\AdminProductNotes\Block\Adminhtml\ProductNotes\Edit;
 
 use Magento\Backend\Block\Widget\Context;
 

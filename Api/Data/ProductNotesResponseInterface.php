@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Priyank\ProductNotes\Api\Data;
+namespace PriyankJivani\AdminProductNotes\Api\Data;
 
 interface ProductNotesResponseInterface
 {
@@ -27,13 +27,13 @@ interface ProductNotesResponseInterface
 
     /**
      * Get notes
-     * @return \Priyank\ProductNotes\Api\Data\NoteItemInterface[]
+     * @return \PriyankJivani\AdminProductNotes\Api\Data\NoteItemInterface[]
      */
     public function getNotes();
 
     /**
      * Set notes
-     * @param \Priyank\ProductNotes\Api\Data\NoteItemInterface[] $notes
+     * @param \PriyankJivani\AdminProductNotes\Api\Data\NoteItemInterface[] $notes
      * @return $this
      */
     public function setNotes($notes);

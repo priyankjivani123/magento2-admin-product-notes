@@ -5,20 +5,20 @@
  */
 declare(strict_types=1);
 
-namespace Priyank\ProductNotes\Api\Data;
+namespace PriyankJivani\AdminProductNotes\Api\Data;
 
 interface ProductNotesSearchResultsInterface extends \Magento\Framework\Api\SearchResultsInterface
 {
 
     /**
      * Get ProductNotes list.
-     * @return \Priyank\ProductNotes\Api\Data\ProductNotesInterface[]
+     * @return \PriyankJivani\AdminProductNotes\Api\Data\ProductNotesInterface[]
      */
     public function getItems();
 
     /**
      * Set product_id list.
-     * @param \Priyank\ProductNotes\Api\Data\ProductNotesInterface[] $items
+     * @param \PriyankJivani\AdminProductNotes\Api\Data\ProductNotesInterface[] $items
      * @return $this
      */
     public function setItems(array $items);

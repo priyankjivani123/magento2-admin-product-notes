@@ -1,5 +1,5 @@
 {
-    "name": "priyank/module-admin-product-notes",
+    "name": "priyankjivani/module-admin-product-notes",
     "description": "Magento 2 Admin Product Notes Extension allowing store administrators to attach internal operational notes to catalog products with Admin Grid and REST API.",
     "type": "magento2-module",
     "version": "1.0.0",
@@ -21,7 +21,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "Priyank\\ProductNotes\\": ""
+            "PriyankJivani\\AdminProductNotes\\": ""
         }
     }
 }

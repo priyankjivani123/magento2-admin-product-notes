@@ -5,10 +5,10 @@
  */
 declare(strict_types=1);
 
-namespace Priyank\ProductNotes\Model\Data;
+namespace PriyankJivani\AdminProductNotes\Model\Data;
 
 use Magento\Framework\Api\AbstractSimpleObject;
-use Priyank\ProductNotes\Api\Data\ProductNotesResponseInterface;
+use PriyankJivani\AdminProductNotes\Api\Data\ProductNotesResponseInterface;
 
 class ProductNotesResponse extends AbstractSimpleObject implements ProductNotesResponseInterface
 {

@@ -5,10 +5,10 @@
  */
 declare(strict_types=1);
 
-namespace Priyank\ProductNotes\Model;
+namespace PriyankJivani\AdminProductNotes\Model;
 
 use Magento\Framework\Model\AbstractModel;
-use Priyank\ProductNotes\Api\Data\ProductNotesInterface;
+use PriyankJivani\AdminProductNotes\Api\Data\ProductNotesInterface;
 
 class ProductNotes extends AbstractModel implements ProductNotesInterface
 {
@@ -18,7 +18,7 @@ class ProductNotes extends AbstractModel implements ProductNotesInterface
      */
     public function _construct()
     {
-        $this->_init(\Priyank\ProductNotes\Model\ResourceModel\ProductNotes::class);
+        $this->_init(\PriyankJivani\AdminProductNotes\Model\ResourceModel\ProductNotes::class);
     }
 
     /**

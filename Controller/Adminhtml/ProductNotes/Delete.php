@@ -5,9 +5,9 @@
  */
 declare(strict_types=1);
 
-namespace Priyank\ProductNotes\Controller\Adminhtml\ProductNotes;
+namespace PriyankJivani\AdminProductNotes\Controller\Adminhtml\ProductNotes;
 
-class Delete extends \Priyank\ProductNotes\Controller\Adminhtml\ProductNotes
+class Delete extends \PriyankJivani\AdminProductNotes\Controller\Adminhtml\ProductNotes
 {
 
     /**
@@ -24,7 +24,7 @@ class Delete extends \Priyank\ProductNotes\Controller\Adminhtml\ProductNotes
         if ($id) {
             try {
                 // init model and delete
-                $model = $this->_objectManager->create(\Priyank\ProductNotes\Model\ProductNotes::class);
+                $model = $this->_objectManager->create(\PriyankJivani\AdminProductNotes\Model\ProductNotes::class);
                 $model->load($id);
                 $model->delete();
                 // display success message
@@ -51,7 +51,7 @@ class Delete extends \Priyank\ProductNotes\Controller\Adminhtml\ProductNotes
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Priyank_ProductNotes::ProductNotes_delete');
+        return $this->_authorization->isAllowed('PriyankJivani_AdminProductNotes::ProductNotes_delete');
     }
 }
 

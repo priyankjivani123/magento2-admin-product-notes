@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Priyank\ProductNotes\Api\Data;
+namespace PriyankJivani\AdminProductNotes\Api\Data;
 
 interface NoteItemInterface
 {

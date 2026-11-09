@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Priyank\ProductNotes\Controller\Adminhtml\ProductNotes;
+namespace PriyankJivani\AdminProductNotes\Controller\Adminhtml\ProductNotes;
 
 class InlineEdit extends \Magento\Backend\App\Action
 {
@@ -43,8 +43,8 @@ class InlineEdit extends \Magento\Backend\App\Action
                 $error = true;
             } else {
                 foreach (array_keys($postItems) as $modelid) {
-                    /** @var \Priyank\ProductNotes\Model\ProductNotes $model */
-                    $model = $this->_objectManager->create(\Priyank\ProductNotes\Model\ProductNotes::class)->load($modelid);
+                    /** @var \PriyankJivani\AdminProductNotes\Model\ProductNotes $model */
+                    $model = $this->_objectManager->create(\PriyankJivani\AdminProductNotes\Model\ProductNotes::class)->load($modelid);
                     try {
                         $model->setData(array_merge($model->getData(), $postItems[$modelid]));
                         $model->save();
@@ -69,7 +69,7 @@ class InlineEdit extends \Magento\Backend\App\Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Priyank_ProductNotes::ProductNotes_update');
+        return $this->_authorization->isAllowed('PriyankJivani_AdminProductNotes::ProductNotes_update');
     }
 }
 

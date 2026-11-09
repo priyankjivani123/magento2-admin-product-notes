@@ -5,20 +5,20 @@
  */
 declare(strict_types=1);
 
-namespace Priyank\ProductNotes\Controller\Adminhtml\ProductNotes;
+namespace PriyankJivani\AdminProductNotes\Controller\Adminhtml\ProductNotes;
 
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Backend\App\Action\Context;
 use Magento\Ui\Component\MassAction\Filter;
-use Priyank\ProductNotes\Model\ResourceModel\ProductNotes\CollectionFactory;
-use Priyank\ProductNotes\Api\ProductNotesRepositoryInterface;
+use PriyankJivani\AdminProductNotes\Model\ResourceModel\ProductNotes\CollectionFactory;
+use PriyankJivani\AdminProductNotes\Api\ProductNotesRepositoryInterface;
 
 class MassDelete extends \Magento\Backend\App\Action
 {
     /**
      * Authorization level
      */
-    const ADMIN_RESOURCE = 'Priyank_ProductNotes::ProductNotes_delete';
+    const ADMIN_RESOURCE = 'PriyankJivani_AdminProductNotes::ProductNotes_delete';
 
     /**
      * @var Filter
@@ -94,6 +94,6 @@ class MassDelete extends \Magento\Backend\App\Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Priyank_ProductNotes::ProductNotes_delete');
+        return $this->_authorization->isAllowed('PriyankJivani_AdminProductNotes::ProductNotes_delete');
     }
 }

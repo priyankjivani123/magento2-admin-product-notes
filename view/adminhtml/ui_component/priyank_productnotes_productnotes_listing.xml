@@ -25,7 +25,7 @@
 			</storageConfig>
 			<updateUrl path="mui/index/render"/>
 		</settings>
-		<aclResource>Priyank_ProductNotes::ProductNotes</aclResource>
+		<aclResource>PriyankJivani_AdminProductNotes::ProductNotes</aclResource>
 		<dataProvider name="priyank_productnotes_productnotes_listing_data_source" class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
 			<settings>
 				<requestFieldName>id</requestFieldName>
@@ -89,7 +89,7 @@
 				<label translate="true">ID</label>
 			</settings>
 		</column>
-		<column name="product_id" class="Priyank\ProductNotes\Ui\Component\Listing\Column\ProductName">
+		<column name="product_id" class="PriyankJivani\AdminProductNotes\Ui\Component\Listing\Column\ProductName">
 			<settings>
 				<filter>text</filter>
 				<label translate="true">Product Name</label>
@@ -100,7 +100,7 @@
 				</editor>
 			</settings>
 		</column>
-		<actionsColumn name="actions" class="Priyank\ProductNotes\Ui\Component\Listing\Column\ProductNotesActions">
+		<actionsColumn name="actions" class="PriyankJivani\AdminProductNotes\Ui\Component\Listing\Column\ProductNotesActions">
 			<settings>
 				<indexField>note_id</indexField>
 				<resizeEnabled>false</resizeEnabled>

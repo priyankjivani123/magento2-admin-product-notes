@@ -1,6 +1,6 @@
 <?php
 
-namespace Priyank\ProductNotes\Model\Source;
+namespace PriyankJivani\AdminProductNotes\Model\Source;
 
 use Magento\Framework\Data\OptionSourceInterface;
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory;

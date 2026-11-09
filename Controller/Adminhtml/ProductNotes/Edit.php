@@ -5,9 +5,9 @@
  */
 declare(strict_types=1);
 
-namespace Priyank\ProductNotes\Controller\Adminhtml\ProductNotes;
+namespace PriyankJivani\AdminProductNotes\Controller\Adminhtml\ProductNotes;
 
-class Edit extends \Priyank\ProductNotes\Controller\Adminhtml\ProductNotes
+class Edit extends \PriyankJivani\AdminProductNotes\Controller\Adminhtml\ProductNotes
 {
 
     protected $resultPageFactory;
@@ -35,7 +35,7 @@ class Edit extends \Priyank\ProductNotes\Controller\Adminhtml\ProductNotes
     {
         // 1. Get ID and create model
         $id = $this->getRequest()->getParam('note_id');
-        $model = $this->_objectManager->create(\Priyank\ProductNotes\Model\ProductNotes::class);
+        $model = $this->_objectManager->create(\PriyankJivani\AdminProductNotes\Model\ProductNotes::class);
         
         // 2. Initial checking
         if ($id) {
@@ -68,7 +68,7 @@ class Edit extends \Priyank\ProductNotes\Controller\Adminhtml\ProductNotes
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Priyank_ProductNotes::ProductNotes_update');
+        return $this->_authorization->isAllowed('PriyankJivani_AdminProductNotes::ProductNotes_update');
     }
 }
 

@@ -5,11 +5,11 @@
  */
 declare(strict_types=1);
 
-namespace Priyank\ProductNotes\Model\ProductNotes;
+namespace PriyankJivani\AdminProductNotes\Model\ProductNotes;
 
 use Magento\Framework\App\Request\DataPersistorInterface;
 use Magento\Ui\DataProvider\AbstractDataProvider;
-use Priyank\ProductNotes\Model\ResourceModel\ProductNotes\CollectionFactory;
+use PriyankJivani\AdminProductNotes\Model\ResourceModel\ProductNotes\CollectionFactory;
 
 class DataProvider extends AbstractDataProvider
 {

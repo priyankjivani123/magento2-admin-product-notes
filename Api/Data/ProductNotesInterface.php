@@ -5,7 +5,7 @@
  */
 declare(strict_types=1);
 
-namespace Priyank\ProductNotes\Api\Data;
+namespace PriyankJivani\AdminProductNotes\Api\Data;
 
 interface ProductNotesInterface
 {
@@ -25,7 +25,7 @@ interface ProductNotesInterface
     /**
      * Set note_id
      * @param string $productnotesId
-     * @return \Priyank\ProductNotes\ProductNotes\Api\Data\ProductNotesInterface
+     * @return \PriyankJivani\AdminProductNotes\ProductNotes\Api\Data\ProductNotesInterface
      */
     public function setProductnotesId($productnotesId);
 
@@ -38,7 +38,7 @@ interface ProductNotesInterface
     /**
      * Set product_id
      * @param string $productId
-     * @return \Priyank\ProductNotes\ProductNotes\Api\Data\ProductNotesInterface
+     * @return \PriyankJivani\AdminProductNotes\ProductNotes\Api\Data\ProductNotesInterface
      */
     public function setProductId($productId);
 
@@ -51,7 +51,7 @@ interface ProductNotesInterface
     /**
      * Set note_title
      * @param string $noteTitle
-     * @return \Priyank\ProductNotes\ProductNotes\Api\Data\ProductNotesInterface
+     * @return \PriyankJivani\AdminProductNotes\ProductNotes\Api\Data\ProductNotesInterface
      */
     public function setNoteTitle($noteTitle);
 
@@ -64,7 +64,7 @@ interface ProductNotesInterface
     /**
      * Set note_details
      * @param string $noteDetails
-     * @return \Priyank\ProductNotes\ProductNotes\Api\Data\ProductNotesInterface
+     * @return \PriyankJivani\AdminProductNotes\ProductNotes\Api\Data\ProductNotesInterface
      */
     public function setNoteDetails($noteDetails);
 
@@ -77,7 +77,7 @@ interface ProductNotesInterface
     /**
      * Set created_at
      * @param string $createdAt
-     * @return \Priyank\ProductNotes\ProductNotes\Api\Data\ProductNotesInterface
+     * @return \PriyankJivani\AdminProductNotes\ProductNotes\Api\Data\ProductNotesInterface
      */
     public function setCreatedAt($createdAt);
 }
